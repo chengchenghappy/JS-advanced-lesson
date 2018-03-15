@@ -20,3 +20,4 @@ if(new Boolean(false)){
 //true
 //true
 //执行
+//undefined 0 NaN null  "" 在Boolean中都将转化成false;其他情况（对象）将转化咸true
