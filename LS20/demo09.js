@@ -27,24 +27,34 @@ console.log("a2b3c4d".split(/\d/));
 // (4) ["a", "b", "c", "d"]
 
 "abcdef21313sfsflsf1223jlnsa".match(/[a-h]/);
-"abcdef21313sfsflsf1223jlnsa".match(/[a-h]/g);
-"abcdef21313sfsflsf1223jlnsa".match(/[123efsa]/g);
-"abcdef21313sfsflsf1223jlnsa".match(/[^123efsa]/g);
-"abcdef21313sfsflsf1223jlnsa".match(/[1-2a-d]/g);
-"hello world Hi you".match(/hello|world/);
-"hello world Hi you".match(/hello|world/g);
-"world Hi you".match(/hello|world/);
-"THat hot hat".match(/h.t/);
-"THat hot hat".match(/h.t/g);
-"THat hot hat".match(/h.t/gi);
 // ["a", index: 0, input: "abcdef21313sfsflsf1223jlnsa", groups: undefined]
+
+"abcdef21313sfsflsf1223jlnsa".match(/[a-h]/g);
 // (10) ["a", "b", "c", "d", "e", "f", "f", "f", "f", "a"]
+
+"abcdef21313sfsflsf1223jlnsa".match(/[123efsa]/g);
 // (20) ["a", "e", "f", "2", "1", "3", "1", "3", "s", "f", "s", "f", "s", "f", "1", "2", "2", "3", "s", "a"]
+
+"abcdef21313sfsflsf1223jlnsa".match(/[^123efsa]/g);
 // (7) ["b", "c", "d", "l", "j", "l", "n"]
+
+"abcdef21313sfsflsf1223jlnsa".match(/[1-2a-d]/g);
 // (11) ["a", "b", "c", "d", "2", "1", "1", "1", "2", "2", "a"]
+
+"hello world Hi you".match(/hello|world/);
 // ["hello", index: 0, input: "hello world Hi you", groups: undefined]
+
+"hello world Hi you".match(/hello|world/g);
 // (2) ["hello", "world"]
+
+"world Hi you".match(/hello|world/);
 // ["world", index: 0, input: "world Hi you", groups: undefined]
+
+"THat hot hat".match(/h.t/);
 // ["hot", index: 5, input: "THat hot hat", groups: undefined]
+
+"THat hot hat".match(/h.t/g);
 // (2) ["hot", "hat"]
+
+"THat hot hat".match(/h.t/gi);
 // (3) ["Hat", "hot", "hat"]
