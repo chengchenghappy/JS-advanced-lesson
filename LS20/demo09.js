@@ -16,10 +16,15 @@ console.log("a1b2c3d4".match(/\d/g));//[ '1', '2', '3', '4' ]
 console.log("a,b,c,d".replace(",","X"));
 console.log("a2b3c4d".replace(/[2-3]/,"X"));
 console.log("a2b3c4d".replace(/[2-3]/g,"X"));
+// aXb,c,d
+// aXb3c4d
+// aXbXc4d
 
 //String.prototype.split
 console.log("a,b,c,d".split(","));
 console.log("a2b3c4d".split(/\d/));
+// (4) ["a", "b", "c", "d"]
+// (4) ["a", "b", "c", "d"]
 
 "abcdef21313sfsflsf1223jlnsa".match(/[a-h]/);
 "abcdef21313sfsflsf1223jlnsa".match(/[a-h]/g);
@@ -32,3 +37,14 @@ console.log("a2b3c4d".split(/\d/));
 "THat hot hat".match(/h.t/);
 "THat hot hat".match(/h.t/g);
 "THat hot hat".match(/h.t/gi);
+// ["a", index: 0, input: "abcdef21313sfsflsf1223jlnsa", groups: undefined]
+// (10) ["a", "b", "c", "d", "e", "f", "f", "f", "f", "a"]
+// (20) ["a", "e", "f", "2", "1", "3", "1", "3", "s", "f", "s", "f", "s", "f", "1", "2", "2", "3", "s", "a"]
+// (7) ["b", "c", "d", "l", "j", "l", "n"]
+// (11) ["a", "b", "c", "d", "2", "1", "1", "1", "2", "2", "a"]
+// ["hello", index: 0, input: "hello world Hi you", groups: undefined]
+// (2) ["hello", "world"]
+// ["world", index: 0, input: "world Hi you", groups: undefined]
+// ["hot", index: 5, input: "THat hot hat", groups: undefined]
+// (2) ["hot", "hat"]
+// (3) ["Hat", "hot", "hat"]
